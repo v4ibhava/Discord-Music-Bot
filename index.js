@@ -28,8 +28,9 @@ const manager = new LavalinkManager({
   nodes: [
     {
       id: "main",
-      host: "127.0.0.1",
-      port: 2333,
+      host: "discord-music-bot-0ttv.onrender.com",
+      port: 443,
+      secure: true,
       authorization: process.env.LAVALINK_PASSWORD
     }
   ],
