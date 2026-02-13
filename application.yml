@@ -1,11 +1,12 @@
 server:
-  port: 2333
+  port: 10000
 
 lavalink:
   server:
     password: "youshallnotpass"
     sources:
       youtube: false
+
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.17.0"
       repository: "https://maven.lavalink.dev/releases"
