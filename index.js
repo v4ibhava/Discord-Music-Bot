@@ -254,17 +254,21 @@ client.on('error', console.error);
 process.on('unhandledRejection', console.error);
 process.on('uncaughtException', console.error);
 
-client.login(process.env.DISCORD_TOKEN);
-/* trick */
+/* ===== EXPRESS SERVER FOR RENDER ===== */
+
 const express = require("express");
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
   res.send("Bot is running.");
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Web server listening on port ${PORT}`);
 });
+
+/* ===== START DISCORD BOT ===== */
+
+client.login(process.env.DISCORD_TOKEN);
